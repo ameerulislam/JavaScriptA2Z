@@ -15,3 +15,21 @@ transpiled from es6 into es5 to support older browsers
 Babel is complier / transpiler in the background
 webpack, babel plugin for webpack
 babeljs.io
+example 1
+es6
+const name = "Ameer"
+es5
+"use strict";
+var name = "Ameer"
+Babeljs.io will transpile this in the background
+example 2
+es6 
+const sayHi = () => {
+    console.log('Hi')
+}
+es5
+"use strict";
+
+var sayHi = function sayHi() {
+    console.log('Hi);
+};
