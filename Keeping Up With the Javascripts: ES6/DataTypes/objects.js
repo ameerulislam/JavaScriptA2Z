@@ -48,10 +48,26 @@ profile.sayHi(); // invoking function
 profile.sayAge(); // invoking function
 
 // Constructor pattern for creating objects
-function profileConstructor(firstName, LastName, age, phone, address) {
+function ProfileConstructor(firstName, LastName, age, phone, address) {
     this.firstName =  firstName;
     this.LastName = LastName;
     this.age = age;
     this.phone = phone;
     this.address = address;
+    this.sayHi = function(){
+        console.log("Hi");
+    };
+    this.sayAge = function(){
+        console.log("The age is " + this.age);
+    }
 }
+
+var profile1 = new ProfileConstructor("Ameer", "Ul Islam", 37, "555-555-555", "Dhaka BD");
+var profile2 = new ProfileConstructor("Raeesul", "Islam", 35, "555-555-222", "Dubai UAE");
+console.log(profile1);
+profile1.sayAge();
+profile2.sayAge();
+
+// Adding new field / property to object
+profile1.fathersName = "A.F.M. Jalal Uddin";
+console.log(profile1);
